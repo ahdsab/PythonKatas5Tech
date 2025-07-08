@@ -8,7 +8,9 @@ def is_unique(string):
     Returns:
         True if all characters are unique, False otherwise
     """
-    
+    for i in range(len(string) - 1):
+        if string[i] == string[i + 1]:
+            return False
     
     return True
 
