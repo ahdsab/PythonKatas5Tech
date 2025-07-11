@@ -5,7 +5,7 @@ def rotate_matrix(matrix):
     Args:
         matrix: the 2D square matrix to rotate
     """
-    pass
+    return [[row[i] for row in matrix[::-1]] for i in range(len(matrix[0]))]
 
 
 def print_matrix(matrix):
@@ -28,9 +28,9 @@ if __name__ == '__main__':
 
     print("Original Matrix:")
     print_matrix(matrix)
-    rotate_matrix(matrix)
+    # rotate_matrix(matrix)
     print("Matrix after 90-degree clockwise rotation:")
-    print_matrix(matrix)
+    print_matrix(rotate_matrix(matrix))
 
     # Expected output:
     # Original Matrix:
