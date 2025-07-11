@@ -6,7 +6,9 @@ def reduce_array(numbers):
     Args:
         numbers: the list of integers to modify
     """
-    pass
+    if numbers == []:
+        return []
+    return [numbers[0]] + [(numbers[i] - numbers[i - 1]) for i in range(1, len(numbers))]
 
 
 def print_list(array):
@@ -25,7 +27,7 @@ if __name__ == '__main__':
     print_list(sample_list)
     reduce_array(sample_list)
     print("Reduced list: ")
-    print_list(sample_list)
+    print_list(reduce_array(sample_list))
 
     # Expected output:
     # Original list:
